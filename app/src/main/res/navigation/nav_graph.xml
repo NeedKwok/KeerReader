@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@+id/view_paper_fragment">
+
+    <fragment
+        android:id="@+id/view_paper_fragment"
+        android:name="com.example.keerreader.ui.HomeViewPagerFragment"
+        android:label="@string/title_bottom_navigation"
+        tools:layout="@layout/fragment_home_view_paper" />
+
+</navigation>
