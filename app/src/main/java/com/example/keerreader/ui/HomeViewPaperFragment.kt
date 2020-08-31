@@ -22,8 +22,8 @@ class HomeViewPagerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentHomeViewPaperBinding.inflate(inflater, container, false)
-        val tabLayout = binding.tabs
-        val viewPager = binding.viewPager
+        val tabLayout = binding.tabLayout
+        val viewPager = binding.viewPager2
 
         viewPager.adapter = HomeViewPaperAdapter(this)
 
@@ -33,15 +33,15 @@ class HomeViewPagerFragment : Fragment() {
             tab.text = getTabTitle(position)
         }.attach()
 
-        //(activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
         return binding.root
     }
 
     private fun getTabIcon(position: Int): Int {
         return when (position) {
-            BOOKSHELF_INDEX -> R.drawable.garden_tab_selector
-            LIBRARY_INDEX -> R.drawable.plant_list_tab_selector
+            BOOKSHELF_INDEX -> R.drawable.bookshelf_18
+            LIBRARY_INDEX -> R.drawable.library_18
             else -> throw IndexOutOfBoundsException()
         }
     }

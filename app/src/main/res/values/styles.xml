@@ -17,28 +17,49 @@
 <resources>
 
     <!-- To see how these attributes are used, please visit https://material.io/develop/android/theming/color/ -->
-    <style name="Base.Theme.Sunflower" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/sunflower_green_500</item>
-        <item name="colorOnPrimary">@color/sunflower_yellow_500</item>
-        <item name="colorPrimaryDark">@color/sunflower_green_700</item>
-        <item name="colorOnSurface">@color/sunflower_black</item>
-        <item name="colorAccent">@color/sunflower_green_700</item>
-        <item name="colorSurface">@color/sunflower_gray_50</item>
-        <item name="colorSecondary">@color/sunflower_yellow_500</item>
-        <item name="android:colorBackground">@color/sunflower_green_500</item>
+    <style name="Base.Theme.KeerReader" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+<!--        <item name="colorSurface">@color/sunflower_gray_50</item>-->
+<!--        <item name="colorOnSurface">@color/sunflower_black</item>-->
+<!--        <item name="colorSecondary">@color/sunflower_yellow_500</item>-->
+<!--        <item name="android:colorBackground">@color/sunflower_green_500</item>-->
     </style>
 
-    <style name="Theme.Sunflower" parent="Base.Theme.Sunflower"/>
+    <style name="Theme.KeerReader" parent="Base.Theme.KeerReader"/>
 
-    <style name="Theme.Sunflower.NoActionBar">
+    <style name="Theme.KeerReader.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Sunflower.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+    <style name="Theme.KeerReader.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
 
-    <style name="TextAppearance.Sunflower.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5" >
-        <item name="android:textColor">?attr/colorOnSurface</item>
+<!--    <style name="Widget.MaterialComponents.Toolbar.Primary">-->
+<!--        <item name="android:background">?attr/colorPrimary</item>-->
+<!--        <item name="titleTextColor">?attr/colorOnPrimary</item>-->
+<!--        <item name="subtitleTextColor">@color/material_on_primary_emphasis_medium</item>-->
+<!--        &lt;!&ndash; Note: this theme overlay will only work if the style is applied directly to a Toolbar. &ndash;&gt;-->
+<!--        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Toolbar.Primary</item>-->
+<!--    </style>-->
+<!--    <style name="TextAppearance.Sunflower.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5" >-->
+<!--        <item name="android:textColor">?attr/colorOnSurface</item>-->
+<!--    </style>-->
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">0dp</item>
+<!--        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>-->
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabRippleColor">@color/white</item>
+    </style>
+    <style name="tabTextSize">
+        <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="Widget.KeerReader.TabLayout" parent="Base.Widget.Design.TabLayout" />
 </resources>

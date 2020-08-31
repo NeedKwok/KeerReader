@@ -15,56 +15,62 @@
         tools:context=".ui.HomeViewPaperFragment">
 
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
+            android:id="@+id/view_pager2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-<!--        <com.google.android.material.appbar.AppBarLayout-->
-<!--            android:id="@+id/app_bar_layout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fitsSystemWindows="true"-->
-<!--            android:theme="@style/Theme.Sunflower.AppBarOverlay">-->
-
-<!--            <com.google.android.material.appbar.CollapsingToolbarLayout-->
-<!--                android:id="@+id/toolbar_layout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:layout_scrollFlags="scroll|snap"-->
-<!--                app:toolbarId="@id/toolbar">-->
-
-<!--                <androidx.appcompat.widget.Toolbar-->
-<!--                    android:id="@+id/toolbar"-->
-<!--                    style="@style/Widget.MaterialComponents.Toolbar.Primary"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="?attr/actionBarSize"-->
-<!--                    app:layout_collapseMode="parallax">-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="?attr/actionBarSize"-->
-<!--                        android:gravity="center"-->
-<!--                        android:text="@string/app_name"-->
-<!--                        android:textAppearance="?attr/textAppearanceHeadline5" />-->
-
-<!--                </androidx.appcompat.widget.Toolbar>-->
-
-<!--            </com.google.android.material.appbar.CollapsingToolbarLayout>-->
-
-<!--            &lt;!&ndash; Override tabIconTint attribute of style with selector &ndash;&gt;-->
-
-<!--        </com.google.android.material.appbar.AppBarLayout>-->
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_gravity="bottom"
-            app:tabIconTint="@drawable/tab_icon_color_selector"
-            app:tabTextColor="?attr/colorPrimaryDark"/>
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Theme.KeerReader.AppBarOverlay">
 
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|snap"
+                app:toolbarId="@id/toolbar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="parallax">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!-- Override tabIconTint attribute of style with selector -->
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <!--必须显式指定linelayout的orientation才可以显示divider-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:divider="@drawable/divider"
+            android:showDividers="beginning|end">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/Widget.KeerReader.TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIconTint="@drawable/tab_icon_color_selector"
+            app:tabTextAppearance="@style/tabTextSize" />
+        </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>
