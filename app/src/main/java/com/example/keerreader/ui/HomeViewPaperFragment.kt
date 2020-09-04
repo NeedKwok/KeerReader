@@ -13,6 +13,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 import com.example.keerreader.adapter.BOOKSHELF_INDEX
 import com.example.keerreader.adapter.LIBRARY_INDEX
+import com.example.keerreader.adapter.SETTINGS_INDEX
+
 
 class HomeViewPagerFragment : Fragment() {
 
@@ -40,8 +42,9 @@ class HomeViewPagerFragment : Fragment() {
 
     private fun getTabIcon(position: Int): Int {
         return when (position) {
-            BOOKSHELF_INDEX -> R.drawable.bookshelf_18
-            LIBRARY_INDEX -> R.drawable.library_18
+            BOOKSHELF_INDEX -> R.drawable.bookshelf_24
+            LIBRARY_INDEX -> R.drawable.library_24
+            SETTINGS_INDEX -> R.drawable.settings_24
             else -> throw IndexOutOfBoundsException()
         }
     }
@@ -50,6 +53,7 @@ class HomeViewPagerFragment : Fragment() {
         return when (position) {
             BOOKSHELF_INDEX -> getString(R.string.bookshelf_title)
             LIBRARY_INDEX -> getString(R.string.library_title)
+            SETTINGS_INDEX -> getString(R.string.settings_title)
             else -> null
         }
     }

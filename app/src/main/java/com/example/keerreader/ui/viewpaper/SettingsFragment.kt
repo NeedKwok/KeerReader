@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.keerreader.databinding.FragmentSettingsBinding
-import com.example.keerreader.viewmodel.BookshelfViewModel
+import com.example.keerreader.viewmodel.SettingsViewModel
 
 class SettingsFragment : Fragment() {
     private lateinit var binding: FragmentSettingsBinding
-    //private lateinit var bookshelfViewModel: BookshelfViewModel
+    //private lateinit var settingsViewModel: settingsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,9 +22,9 @@ class SettingsFragment : Fragment() {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val textView = binding.textSettings
 
-        val bookshelfViewModel : BookshelfViewModel by viewModels()
+        val settingsViewModel : SettingsViewModel by viewModels()
 
-        bookshelfViewModel.text.observe(viewLifecycleOwner, Observer {
+        settingsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return binding.root

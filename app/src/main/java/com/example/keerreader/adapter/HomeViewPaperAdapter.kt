@@ -17,7 +17,7 @@ class HomeViewPaperAdapter(fragment:Fragment) :FragmentStateAdapter(fragment) {
     private val fragmentMap: Map<Int,() -> Fragment> = mapOf(
         BOOKSHELF_INDEX to { BookshelfFragment() },
         LIBRARY_INDEX to { LibraryFragment() },
-        //SETTINGS_INDEX to { SettingsFragment() }
+        SETTINGS_INDEX to { SettingsFragment() }
     )
 
     override fun getItemCount(): Int {

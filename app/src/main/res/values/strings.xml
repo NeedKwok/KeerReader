@@ -4,4 +4,6 @@
     <string name="library_title">书库</string>
     <string name="bookshelf_title">书架</string>
     <string name="settings_title">设置</string>
+    <string name="bookshelf_empty">书架为空，去书城找找吧</string>
+    <string name="book_cover_image">封面</string>
 </resources>

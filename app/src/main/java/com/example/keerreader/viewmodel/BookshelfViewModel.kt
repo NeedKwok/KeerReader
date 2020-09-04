@@ -1,13 +1,15 @@
 package com.example.keerreader.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.keerreader.data.Book
+import com.example.keerreader.data.BookRepository
 
-class BookshelfViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Bookshelf Fragment"
-    }
-    val text: LiveData<String> = _text
+class BookshelfViewModel internal constructor(
+    bookRepository: BookRepository
+) : ViewModel() {
+
+    val books:LiveData<List<Book>> = bookRepository.getBooks()
+
 }
